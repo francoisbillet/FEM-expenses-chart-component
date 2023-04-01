@@ -3,7 +3,7 @@ import Main from "./components/Main";
 
 function App() {
   return (
-    <main className="bg-orange grid place-content-center">
+    <main className="grid place-content-center mt-16">
       <Header />
       <Main />
     </main>

@@ -6,7 +6,7 @@ const Main = () => {
       <h1 className="font-bold text-xl text-brown-800">
         Spending - Last 7 days
       </h1>
-      <div className="flex gap-2.5 items-end pt-10">
+      <div className="flex items-end flex-wrap pt-5">
         {spendings.map((spending, index) => (
           <Spending key={index} spending={spending} />
         ))}
@@ -17,9 +17,9 @@ const Main = () => {
           <p className="text-brown-300">Total this month</p>
           <p className="text-brown-800 text-3xl font-bold">$478.33</p>
         </div>
-        <div className="text-right">
-          <p className="text-brown-800 font-bold">+2.4%</p>
-          <p className="text-brown-300">from last month</p>
+        <div className="text-right self-end">
+          <p className="text-brown-800 font-bold text-sm">+2.4%</p>
+          <p className="text-brown-300 text-sm">from last month</p>
         </div>
       </div>
     </main>
@@ -31,13 +31,16 @@ const Spending = ({ spending }) => {
   const hoverBgColor =
     spending.day === "wed" ? "hover:bg-cyan-200" : "hover:bg-red-200";
   return (
-    <div>
+    <div className="flex flex-col-reverse items-center gap-1">
+      <p className="text-brown-300 text-sm">{spending.day}</p>
       <div
         key={spending.day}
-        className={`w-8 rounded ${bgColor} ${hoverBgColor} hover:cursor-pointer`}
-        style={{ height: `${spending.amount * 2}px` }}
+        className={`rounded ${bgColor} ${hoverBgColor} hover:cursor-pointer peer w-[35px]`}
+        style={{ height: `${spending.amount * 2.5}px` }}
       ></div>
-      <p className="text-brown-300 text-sm text-center">{spending.day}</p>
+      <div className="invisible peer-hover:visible bg-brown-800 text-cream rounded p-1 text-sm">
+        ${spending.amount}
+      </div>
     </div>
   );
 };

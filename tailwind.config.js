@@ -17,7 +17,7 @@ export default {
         800: "hsl(25, 47%, 15%)",
       },
       cream: "hsl(27, 66%, 92%)",
-      orange: "hsl(33, 100%, 98%)",
+      orange: "hsl(33, 100%, 93%)",
       white: "#fff",
     },
   },

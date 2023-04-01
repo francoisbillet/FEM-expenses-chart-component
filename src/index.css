@@ -6,4 +6,9 @@
   html {
     font-family: "DM Sans", system-ui, sans-serif;
   }
+
+  body {
+    background-color: hsl(33, 100%, 93%);
+    height: 100vh;
+  }
 }
