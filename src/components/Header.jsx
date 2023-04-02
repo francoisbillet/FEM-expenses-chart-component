@@ -6,7 +6,7 @@ const Header = () => {
         <p className="text-xl font-bold">$921.48</p>
       </div>
       <img
-        src="public/images/logo.svg"
+        src="/images/logo.svg"
         alt="logo representing two circles intertwined"
       />
     </header>
