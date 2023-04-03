@@ -2,13 +2,13 @@ import spendings from "../../data.json";
 
 const Main = () => {
   return (
-    <main className="bg-white p-5 rounded-lg mt-4">
+    <div className="bg-white p-5 rounded-lg mt-4">
       <h1 className="font-bold text-xl text-brown-800">
         Spending - Last 7 days
       </h1>
       <div className="flex items-end flex-wrap pt-5">
-        {spendings.map((spending, index) => (
-          <Spending key={index} spending={spending} />
+        {spendings.map((spending) => (
+          <Spending key={spending.day} spending={spending} />
         ))}
       </div>
       <hr className="my-4 text-cream" />
@@ -22,7 +22,7 @@ const Main = () => {
           <p className="text-brown-300 text-sm">from last month</p>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
